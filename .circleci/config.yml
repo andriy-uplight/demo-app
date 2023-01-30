@@ -10,4 +10,9 @@ jobs:
       - checkout
       - run: npm ci
       - snyk/scan
+          fail-on-issues: false
+          monitor-on-build: true
+          project: demo-app/circleci-project-setup
+          severity-threshold: high
+          token-variable: SNYK_TOKEN
 workflows: null
